@@ -30,6 +30,6 @@ app.use("/patients", patientRoutes);
 app.use("/users", userRoutes);
 // app.use("/subscribe", subsRoutes);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`Server started on port ${port}`);
 });
