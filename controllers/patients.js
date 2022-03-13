@@ -2,12 +2,33 @@ const mongoose = require("mongoose");
 const Patient = require("../models/patient");
 
 const handleNewPatient = (req, res) => {
-  const { id, name, mobile, age } = req.body;
+  const {
+    id,
+    name,
+    age,
+    gender,
+    mobile,
+    address,
+    complaints,
+    findings,
+    investigation,
+    advice,
+    treatment,
+    finalDiagnosis,
+  } = req.body;
   const newPatient = new Patient({
     id,
     name,
-    mobile,
     age,
+    gender,
+    mobile,
+    address,
+    complaints,
+    findings,
+    investigation,
+    advice,
+    treatment,
+    finalDiagnosis,
   });
   newPatient
     .save()
